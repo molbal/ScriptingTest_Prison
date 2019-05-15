@@ -1,0 +1,22 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_CheckLevelStart("PrisonLevel");
+
+DB_isPlayer(CHARACTERGUID_S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
+KBSECTION
+IF
+RegionStarted("PrisonLevel")
+THEN
+GoalCompleted;
+
+IF
+DB_CheckLevelStart("PrisonLevel")
+AND
+DB_CurrentLevel("PrisonLevel")
+THEN
+GoalCompleted;
+EXITSECTION
+NOT DB_CheckLevelStart("PrisonLevel");
+ENDEXITSECTION
+ParentTargetEdge "__Start"

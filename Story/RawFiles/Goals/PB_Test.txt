@@ -1,0 +1,25 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+CharacterEnteredTrigger(_char, LDC_PrisonFront_8ad27565-0c2f-410c-baa9-eb1bf88ad03a)
+THEN
+DisplayText(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca, "HEY THERE");
+//CharacterMoveTo(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca, _char, 1, "PB_Lizard_Approaching", 1);
+CharacterFollowCharacter(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca, _char);
+DialogRequestStop(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca);
+
+IF
+CharacterLeftTrigger(_char, LDC_PrisonFront_8ad27565-0c2f-410c-baa9-eb1bf88ad03a)
+THEN
+CharacterStopFollow(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca);
+DisplayText(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca, "No, come back and help me");
+//StartDefaultDialog(PrisonTest_Lizard_cc80d475-5874-47cc-9d2c-1d08c512e9ca,_char,"NPC_Lizard_default", 1);
+
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"
