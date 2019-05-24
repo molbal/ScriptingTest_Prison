@@ -28690,8 +28690,27 @@ Goal(61)
 		
 	}
 }
-Goal(62).Title("PB_Test");
+Goal(62).Title("PB_Journal");
 Goal(62)
+{
+	INIT
+	{
+		DB_isPlayer(CHARACTERGUID_S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
+		DB_IsPlayer(S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
+		DB_QuestDef_State("PrisonBreak", "QuestReceived", 1);
+		
+	}
+	KB
+	{
+		
+	}
+	EXIT
+	{
+		
+	}
+}
+Goal(63).Title("PB_Test");
+Goal(63)
 {
 	INIT
 	{
@@ -28722,8 +28741,8 @@ Goal(62)
 		
 	}
 }
-Goal(63).Title("PrisonBreak");
-Goal(63)
+Goal(64).Title("PrisonBreak");
+Goal(64)
 {
 	INIT
 	{
@@ -28738,14 +28757,15 @@ Goal(63)
 		
 	}
 }
-Goal(64).Title("PrisonTest");
-Goal(64)
+Goal(65).Title("PrisonTest");
+Goal(65)
 {
 	INIT
 	{
 		DB_CheckLevelStart("PrisonLevel");
 		
 		DB_isPlayer(CHARACTERGUID_S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
+		DB_IsPlayer(S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
 		
 	}
 	KB
@@ -28769,8 +28789,8 @@ Goal(64)
 		
 	}
 }
-Goal(65).Title("QRY_Characters");
-Goal(65)
+Goal(66).Title("QRY_Characters");
+Goal(66)
 {
 	INIT
 	{
@@ -28968,8 +28988,8 @@ Goal(65)
 		
 	}
 }
-Goal(66).Title("Sandbox");
-Goal(66)
+Goal(67).Title("Sandbox");
+Goal(67)
 {
 	INIT
 	{
@@ -28997,8 +29017,8 @@ Goal(66)
 		
 	}
 }
-Goal(67).Title("Shared_CombatDialogs");
-Goal(67)
+Goal(68).Title("Shared_CombatDialogs");
+Goal(68)
 {
 	INIT
 	{
@@ -29028,8 +29048,8 @@ Goal(67)
 		
 	}
 }
-Goal(68).Title("Z_Shared_Campaign_At_End");
-Goal(68)
+Goal(69).Title("Z_Shared_Campaign_At_End");
+Goal(69)
 {
 	INIT
 	{
@@ -29051,8 +29071,8 @@ Goal(68)
 		
 	}
 }
-Goal(69).Title("Z_Shared_CharacterCreation");
-Goal(69)
+Goal(70).Title("Z_Shared_CharacterCreation");
+Goal(70)
 {
 	INIT
 	{
@@ -29649,8 +29669,8 @@ Goal(69)
 		
 	}
 }
-Goal(70).Title("Z_Shared_CharacterCreation_AfterEvents");
-Goal(70)
+Goal(71).Title("Z_Shared_CharacterCreation_AfterEvents");
+Goal(71)
 {
 	INIT
 	{
@@ -29720,8 +29740,8 @@ Goal(70)
 		
 	}
 }
-Goal(71).Title("ZZZ_LastGoal");
-Goal(71)
+Goal(72).Title("ZZZ_LastGoal");
+Goal(72)
 {
 	INIT
 	{
@@ -29834,7 +29854,7 @@ Goal(11).SubGoal(54);
 Goal(11).SubGoal(55);
 Goal(11).SubGoal(58);
 Goal(11).SubGoal(59);
-Goal(11).SubGoal(67);
+Goal(11).SubGoal(68);
 Goal(20).SubGoals(AND);
 Goal(21).SubGoals(AND);
 Goal(22).SubGoals(AND);
@@ -29846,7 +29866,7 @@ Goal(54).SubGoals(AND);
 Goal(55).SubGoals(AND);
 Goal(58).SubGoals(AND);
 Goal(59).SubGoals(AND);
-Goal(67).SubGoals(AND);
+Goal(68).SubGoals(AND);
 Goal(12).SubGoal(3);
 Goal(12).SubGoal(5);
 Goal(12).SubGoal(9);
@@ -29861,8 +29881,9 @@ Goal(12).SubGoal(49);
 Goal(12).SubGoal(53);
 Goal(12).SubGoal(57);
 Goal(12).SubGoal(62);
-Goal(12).SubGoal(64);
-Goal(12).SubGoal(66);
+Goal(12).SubGoal(63);
+Goal(12).SubGoal(65);
+Goal(12).SubGoal(67);
 Goal(3).SubGoals(AND);
 Goal(5).SubGoals(AND);
 Goal(9).SubGoals(AND);
@@ -29877,12 +29898,13 @@ Goal(49).SubGoals(AND);
 Goal(53).SubGoals(AND);
 Goal(57).SubGoals(AND);
 Goal(62).SubGoals(AND);
-Goal(64).SubGoals(AND);
-Goal(66).SubGoals(AND);
-Goal(66).SubGoal(48);
+Goal(63).SubGoals(AND);
+Goal(65).SubGoals(AND);
+Goal(67).SubGoals(AND);
+Goal(67).SubGoal(48);
 Goal(48).SubGoals(AND);
-Goal(68).SubGoal(69);
-Goal(68).SubGoal(70);
-Goal(69).SubGoals(AND);
+Goal(69).SubGoal(70);
+Goal(69).SubGoal(71);
 Goal(70).SubGoals(AND);
+Goal(71).SubGoals(AND);
 
