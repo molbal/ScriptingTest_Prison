@@ -28696,12 +28696,16 @@ Goal(62)
 	INIT
 	{
 		DB_isPlayer(CHARACTERGUID_S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
-		DB_IsPlayer(S_GLO_CharacterCreationDummy_001_da072fe7-fdd5-42ae-9139-8bd4b9fca406);
 		DB_QuestDef_State("PrisonBreak", "QuestReceived", 1);
 		
 	}
 	KB
 	{
+		IF
+		ObjectFlagSet("QuestUpdate_PrisonBreak_QuestReceived", _speaker, _)
+		THEN
+		ItemTemplateAddTo("WPN_Humans_Sword_2H_B 94aaefe8-4843-4624-b1a0-92d63be2e5b8", _speaker, 1);
+		
 		
 	}
 	EXIT
